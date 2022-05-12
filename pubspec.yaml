@@ -12,9 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
   
-  cupertino_icons: ^1.0.2
+  #? Interface Utils
   flutter_screenutil: ^5.4.0+1 
-
+  responsive_builder: ^0.4.2
+  flutter_svg: ^1.0.3
 
 dev_dependencies:
   flutter_test:
@@ -24,6 +25,95 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: Roobert
+      fonts:
+        - asset: assets/fonts/roobert/Roobert-Medium.otf
+          weight: 500
+        - asset: assets/fonts/roobert/Roobert-Regular.otf
+          weight: 400
+        - asset: assets/fonts/roobert/Roobert-Light.otf
+          weight: 300
+    - family: Manouche
+      fonts:
+        - asset: assets/fonts/manouche/regular/Manouche-ExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/manouche/regular/Manouche-Bold.otf
+          weight: 700
+        - asset: assets/fonts/manouche/regular/Manouche-Medium.otf
+          weight: 500
+        - asset: assets/fonts/manouche/regular/Manouche-Regular.otf
+          weight: 400
+        - asset: assets/fonts/manouche/regular/Manouche-Light.otf
+          weight: 300
+        - asset: assets/fonts/manouche/regular/Manouche-ExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/manouche/regular/Manouche-Thin.otf
+          weight: 100
+    - family: ManoucheCondensed
+      fonts:
+        - asset: assets/fonts/manouche/condensed/Manouche-CondensedExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/manouche/condensed/Manouche-CondensedBold.otf
+          weight: 700
+        - asset: assets/fonts/manouche/condensed/Manouche-CondensedMedium.otf
+          weight: 500
+        - asset: assets/fonts/manouche/condensed/Manouche-CondensedRegular.otf
+          weight: 400
+        - asset: assets/fonts/manouche/condensed/Manouche-CondensedLight.otf
+          weight: 300
+        - asset: assets/fonts/manouche/condensed/Manouche-CondensedExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/manouche/condensed/Manouche-CondensedThin.otf
+          weight: 100
+    - family: ManoucheSemiCondensed
+      fonts:
+        - asset: assets/fonts/manouche/semi_condensed/Manouche-SemiCondensedExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/manouche/semi_condensed/Manouche-SemiCondensedBold.otf
+          weight: 700
+        - asset: assets/fonts/manouche/semi_condensed/Manouche-SemiCondensedMedium.otf
+          weight: 500
+        - asset: assets/fonts/manouche/semi_condensed/Manouche-SemiCondensedRegular.otf
+          weight: 400
+        - asset: assets/fonts/manouche/semi_condensed/Manouche-SemiCondensedLight.otf
+          weight: 300
+        - asset: assets/fonts/manouche/semi_condensed/Manouche-SemiCondensedExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/manouche/semi_condensed/Manouche-SemiCondensedThin.otf
+          weight: 100
+    - family: ManoucheExpanded
+      fonts:
+        - asset: assets/fonts/manouche/expanded/Manouche-ExpandedExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/manouche/expanded/Manouche-ExpandedBold.otf
+          weight: 700
+        - asset: assets/fonts/manouche/expanded/Manouche-ExpandedMedium.otf
+          weight: 500
+        - asset: assets/fonts/manouche/expanded/Manouche-ExpandedRegular.otf
+          weight: 400
+        - asset: assets/fonts/manouche/expanded/Manouche-ExpandedLight.otf
+          weight: 300
+        - asset: assets/fonts/manouche/expanded/Manouche-ExpandedExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/manouche/expanded/Manouche-ExpandedThin.otf
+          weight: 100
+    - family: ManoucheSemiExpanded
+      fonts:
+        - asset: assets/fonts/manouche/semi_expanded/Manouche-SemiExpandedExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/manouche/semi_expanded/Manouche-SemiExpandedBold.otf
+          weight: 700
+        - asset: assets/fonts/manouche/semi_expanded/Manouche-SemiExpandedMedium.otf
+          weight: 500
+        - asset: assets/fonts/manouche/semi_expanded/Manouche-SemiExpandedRegular.otf
+          weight: 400
+        - asset: assets/fonts/manouche/semi_expanded/Manouche-SemiExpandedLight.otf
+          weight: 300
+        - asset: assets/fonts/manouche/semi_expanded/Manouche-SemiExpandedExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/manouche/semi_expanded/Manouche-SemiExpandedThin.otf
+          weight: 100
   assets:
     - assets/img/
 
