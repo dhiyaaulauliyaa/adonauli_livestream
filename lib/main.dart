@@ -1,9 +1,13 @@
+import 'dart:developer';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import 'core/themes/site_color.dart';
-import 'presentation/screens/home_screen.dart';
+import 'globals.dart' as globals;
+import 'presentation/screens/desktop/desktop_home_screen.dart';
+import 'presentation/screens/mobile/mobile_home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,10 +39,40 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: ScreenUtilInit(
-        designSize: const Size(375, 812),
-        builder: (_) {
-          return const HomeScreen();
+      home: ResponsiveBuilder(
+        breakpoints: const ScreenBreakpoints(
+          desktop: 1280,
+          tablet: 800,
+          watch: 250,
+        ),
+        builder: (context, sizeInfo) {
+          log('Size Changed: ${sizeInfo.deviceScreenType}');
+          log('Size Changed: ${sizeInfo.screenSize}');
+
+          var app = ScreenTypeLayout(
+            breakpoints: const ScreenBreakpoints(
+              desktop: 1280,
+              tablet: 800,
+              watch: 250,
+            ),
+            desktop: const DesktopHomeScreen(),
+            mobile: OrientationLayoutBuilder(
+              portrait: (context) => const MobileHomeScreen(),
+              landscape: (context) {
+                globals.deviceType = DeviceScreenType.desktop;
+                return const DesktopHomeScreen();
+              },
+            ),
+          );
+
+          if (sizeInfo.deviceScreenType == DeviceScreenType.desktop) {
+            globals.deviceType = DeviceScreenType.desktop;
+          } else if (sizeInfo.deviceScreenType == DeviceScreenType.tablet) {
+            globals.deviceType = DeviceScreenType.desktop;
+          } else if (sizeInfo.deviceScreenType == DeviceScreenType.mobile) {
+            globals.deviceType = DeviceScreenType.mobile;
+          }
+          return app;
         },
       ),
     );
