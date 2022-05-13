@@ -7,6 +7,7 @@ class SiteColor {
   static const Color grey = Color(0xFFB9B9B9);
   static const Color white = Color(0xFFFFFFFF);
 
+  static const Color superDarkBlue = Color(0xFF31364B);
   static const Color darkBlue = Color(0xFF496D9B);
   static const Color darkPink = Color(0xFFEC969E);
   static const Color darkGreen = Color(0xFF2C8580);
