@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:show_up_animation/show_up_animation.dart';
 
 import 'hidden_widget.dart';
@@ -26,44 +25,20 @@ class TransitionBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (show) {
-      return _buildWidget();
-    } else {
-      return HiddenWidget(child: child);
-    }
-    // return AnimatedSwitcher(
-    //   duration: Duration(milliseconds: show ? 200 : 0),
-    //   child: show
-    //       ? newMethod()
-    //       : HiddenWidget(
-    //           child: child,
-    //         ),
-    // );
-  }
-
-  Widget _buildWidget() {
-    return ShowUpAnimation(
-      animationDuration: duration,
-      curve: curve,
-      delayStart: startDelay,
-      direction: direction,
-      offset: offset,
-      child: child,
+    return AnimatedSwitcher(
+      duration: Duration(milliseconds: show ? 200 : 0),
+      child: show
+          ? ShowUpAnimation(
+              animationDuration: duration,
+              curve: curve,
+              delayStart: startDelay,
+              direction: direction,
+              offset: offset,
+              child: child,
+            )
+          : HiddenWidget(
+              child: child,
+            ),
     );
-    // return AnimatedContainer(
-    //   duration: duration,
-    //   transform: getTransform(show),
-    //   child: child,
-    // );
   }
-
-  // getTransform(bool show) {
-  //   if (show) {
-  //     return Matrix4.identity();
-  //   } else {
-  //     return Matrix4.identity()
-  //       ..translate(-1.sw, 0)
-  //       ..scale(1, 1);
-  //   }
-  // }
 }
