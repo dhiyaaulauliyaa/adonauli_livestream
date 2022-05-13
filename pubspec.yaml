@@ -116,6 +116,7 @@ flutter:
           weight: 100
   assets:
     - assets/img/
+    - assets/svg/
 
   
   
