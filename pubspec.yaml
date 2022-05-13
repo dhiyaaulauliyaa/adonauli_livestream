@@ -11,11 +11,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  #? State Management
+  flutter_hooks: ^0.18.3          # Stateful Replacement
   
   #? Interface Utils
   flutter_screenutil: ^5.4.0+1 
   responsive_builder: ^0.4.2
   flutter_svg: ^1.0.3
+
+  #? Animation Utils
+  show_up_animation: ^2.0.0
+
+  #? Other Utils 
+  url_launcher: ^6.0.10               # Launch URL 
 
 dev_dependencies:
   flutter_test:
