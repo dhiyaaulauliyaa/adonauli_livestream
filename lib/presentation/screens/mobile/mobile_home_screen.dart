@@ -177,24 +177,24 @@ class MobileHomeScreen extends HookWidget {
           TransitionBox(
             show: show,
             startDelay: const Duration(milliseconds: 200 * 1),
-            child: Row(
-              children: [
-                Text(
-                  'The wedding of '.toUpperCase(),
-                  style: SiteFont.primary(
-                    color: SiteColor.darkGrey,
-                    fontSize: 18.sp,
-                  ),
+            child: RichText(
+              text: TextSpan(
+                style: SiteFont.primary(
+                  color: SiteColor.darkGrey,
+                  fontSize: 18.sp,
                 ),
-                Text(
-                  'ADO & NAULI',
-                  style: SiteFont.primary(
-                    color: SiteColor.darkGrey,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 18.sp,
+                children: [
+                  TextSpan(
+                    text: 'The wedding of '.toUpperCase(),
                   ),
-                ),
-              ],
+                  const TextSpan(
+                    text: 'ADO & NAULI',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           SizedBox(height: 10.h),
